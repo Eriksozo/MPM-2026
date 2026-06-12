@@ -1,0 +1,7 @@
+{
+  "name": "mpm-2026",
+  "compatibility_date": "2026-06-12",
+  "assets": {
+    "directory": "./out"
+  }
+}
