@@ -229,7 +229,7 @@ export function OfferSection() {
             transition: 'all 0.8s var(--ease)',
           }}>
             <span className="eyebrow" style={{ textAlign: 'center', display: 'block', marginBottom: 16 }}>Acesso Completo</span>
-            <div className="offer-price">R$37<span className="offer-cents">,90</span></div>
+            <div className="offer-price">R$47<span className="offer-cents">,90</span></div>
             <p style={{ color: 'var(--text-mid)', fontSize: '0.9rem', marginTop: 8, marginBottom: 20, textAlign: 'center' }}>Acesso ao treinamento completo A Nova Linguagem da Pentatônica.</p>
             <UrgencyBanner />
             <div style={{ marginTop: 24 }}>
