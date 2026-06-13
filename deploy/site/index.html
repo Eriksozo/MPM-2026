@@ -869,6 +869,7 @@
       padding: var(--ob-pad-top) var(--ob-pad-x) var(--ob-pad-bottom);
       text-align: center;
       position: relative;
+      overflow: hidden;
       box-shadow: var(--shadow-lg), var(--shadow-glow-primary);
     }
     .offer-box::before {
@@ -888,7 +889,7 @@
       padding: 14px var(--space-5);
       background: linear-gradient(90deg, rgba(229, 90, 62, 0.18) 0%, rgba(229, 90, 62, 0.32) 50%, rgba(229, 90, 62, 0.18) 100%);
       border-bottom: 1px solid rgba(229, 90, 62, 0.4);
-      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+      border-radius: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1126,12 +1127,6 @@
       .faq-section { margin-bottom: 100px; }
       .final-cta { padding-bottom: 120px; }
       
-      /* Sticky bar */
-      .sticky-bar { padding: var(--space-2) var(--space-3); gap: var(--space-3); }
-      .sticky-bar-text { flex: 1 1 auto; min-width: 0; gap: 1px; overflow: hidden; }
-      .sticky-bar-text span { display: none; }
-      .sticky-bar-text strong { font-size: var(--text-base); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-      .sticky-bar .btn { font-size: 14px; padding: 12px var(--space-4); min-height: 46px; }
     }
 
     /* ══════════════════════════
@@ -1231,7 +1226,14 @@
     }
     .sticky-bar-text strong { font-family: var(--font-display); font-weight: 400; font-size: var(--text-md); letter-spacing: 0.04em; color: var(--color-text-high); }
     .sticky-bar-text span { color: var(--color-primary); font-size: var(--text-xs); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; }
-    .sticky-bar .btn { flex-shrink: 0; font-size: var(--text-sm); padding: var(--space-3) var(--space-5); min-height: 48px; }
+    .sticky-bar .btn { flex: 0 0 auto; width: auto; max-width: none; font-size: var(--text-sm); padding: var(--space-3) var(--space-5); min-height: 48px; }
+    @media (max-width: 560px) {
+      .sticky-bar { padding: var(--space-2) var(--space-3); gap: var(--space-3); }
+      .sticky-bar-text { flex: 1 1 auto; min-width: 0; gap: 1px; overflow: hidden; }
+      .sticky-bar-text span { display: none; }
+      .sticky-bar-text strong { font-size: var(--text-base); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .sticky-bar .btn { font-size: 14px; padding: 12px var(--space-4); min-height: 46px; width: auto; max-width: none; flex: 0 0 auto; }
+    }
     @media (max-width: 380px) {
       .sticky-bar-text { display: none; }
       .sticky-bar { justify-content: center; padding: var(--space-3); }
