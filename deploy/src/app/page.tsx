@@ -22,13 +22,11 @@ import {
   StickyCTA,
   FAQSection,
   MiniQuiz,
-  ExitIntentPopup,
 } from '@/components/Conversion';
 
 export default function Home() {
   return (
     <>
-      <ExitIntentPopup />
       <StickyCTA />
       <Navbar />
       <HeroSection />
