@@ -38,7 +38,7 @@ export function HeroSection() {
           </Anim>
           <Anim delay={0.5}>
             <div style={{ marginTop: 24 }}>
-              <PulseRing><a href="#oferta" className="btn-cta btn-cta-pulse">▶ Quero dominar a pentatônica</a></PulseRing>
+              <PulseRing><a href="#oferta" className="btn-cta btn-cta-pulse">▶︎ Quero dominar a pentatônica</a></PulseRing>
             </div>
             <p className="hero-note">Treinamento criado por Prof. Joab Pereira para baixistas que querem tocar com mais liberdade, fraseado e identidade musical.</p>
           </Anim>

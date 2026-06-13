@@ -233,7 +233,7 @@ export function OfferSection() {
             <p style={{ color: 'var(--text-mid)', fontSize: '0.9rem', marginTop: 8, marginBottom: 20, textAlign: 'center' }}>Acesso ao treinamento completo A Nova Linguagem da Pentatônica.</p>
             <UrgencyBanner />
             <div style={{ marginTop: 24 }}>
-              <PulseRing><a href={LINK} className="btn-cta btn-cta-pulse" style={{ width: '100%', justifyContent: 'center' }}>▶ Quero acessar o treinamento por R$47,90</a></PulseRing>
+              <PulseRing><a href={LINK} className="btn-cta btn-cta-pulse" style={{ width: '100%', justifyContent: 'center' }}>▶︎ Quero acessar o treinamento por R$47,90</a></PulseRing>
             </div>
             <TrustSignals />
           </div>
@@ -269,7 +269,7 @@ export function OfferSection() {
 
         <Anim delay={0.35}>
           <div style={{ textAlign: 'center', marginTop: 48 }}>
-            <PulseRing><a href={LINK} className="btn-cta btn-cta-pulse" style={{ fontSize: '1.1rem', padding: '18px 48px' }}>▶ Quero acessar o treinamento por R$47,90</a></PulseRing>
+            <PulseRing><a href={LINK} className="btn-cta btn-cta-pulse" style={{ fontSize: '1.1rem', padding: '18px 48px' }}>▶︎ Quero acessar o treinamento por R$47,90</a></PulseRing>
             <p style={{ marginTop: 14, fontSize: '0.75rem', color: 'var(--text-low)', maxWidth: 480, margin: '14px auto 0', letterSpacing: '0.04em' }}>Garanta seu acesso e comece hoje.</p>
             <div style={{ marginTop: 12 }}><GuaranteeBadge compact={true} /></div>
             <TrustSignals />
@@ -295,7 +295,7 @@ export function FinalCTASection() {
         <h2 className="sect-title" style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 16px', position: 'relative', zIndex: 1 }}>Entre agora para o treinamento <GradientText>A Nova Linguagem da Pentatônica</GradientText></h2>
         <p className="sect-text" style={{ textAlign: 'center', margin: '0 auto 40px', maxWidth: 520, position: 'relative', zIndex: 1 }}>Comece a dominar a pentatônica no contrabaixo do zero ao avançado.</p>
         <div style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <PulseRing><a href="#oferta" className="btn-cta btn-cta-pulse" style={{ fontSize: '1.1rem', padding: '18px 48px' }}>▶ Quero entrar no treinamento</a></PulseRing>
+          <PulseRing><a href="#oferta" className="btn-cta btn-cta-pulse" style={{ fontSize: '1.1rem', padding: '18px 48px' }}>▶︎ Quero entrar no treinamento</a></PulseRing>
         </div>
       </Anim>
       <Anim delay={0.2}>

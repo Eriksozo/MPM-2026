@@ -36,7 +36,7 @@ export function StickyCTA() {
         width: '100%', maxWidth: 400, justifyContent: 'center',
         fontSize: '1rem', padding: '14px 24px', minHeight: 50,
       }}>
-        ▶ Garantir por R$47,90
+        ▶︎ Garantir por R$47,90
       </a>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 2 }}>
         <span style={{ fontSize: 10, color: 'var(--text-low)', display: 'flex', alignItems: 'center', gap: 4 }}>
@@ -314,7 +314,7 @@ export function MiniQuiz() {
                 </>
               )}
               <a href="#oferta" className="btn-cta" style={{ marginTop: 20, fontSize: '0.95rem', padding: '14px 36px' }}>
-                ▶ Ver a oferta especial
+                ▶︎ Ver a oferta especial
               </a>
             </div>
           </Anim>
@@ -374,7 +374,7 @@ export function ExitIntentPopup() {
           Garantia de 7 dias · Acesso imediato · Pagamento seguro
         </p>
         <a href={LINK} className="btn-cta" style={{ width: '100%', justifyContent: 'center', fontSize: '1rem' }}>
-          ▶ Quero garantir meu acesso
+          ▶︎ Quero garantir meu acesso
         </a>
         <button onClick={() => setClosed(true)} style={{
           background: 'none', border: 'none', color: 'var(--text-low)',
