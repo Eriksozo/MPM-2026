@@ -75,12 +75,6 @@ export function ProblemSection() {
           <p><strong>Mas a música não fala.</strong></p>
         </div></Anim>
         <Anim delay={0.2} type="scale"><div className="callout">E é exatamente isso que o treinamento A Nova Linguagem da Pentatônica resolve.</div></Anim>
-        <Anim delay={0.3} type="scale">
-          <div style={{ maxWidth: 360, margin: '40px auto 0', borderRadius: 'var(--r-xl)', overflow: 'hidden', border: '1px solid rgba(217,163,91,0.18)', boxShadow: '0 20px 60px -15px rgba(0,0,0,0.6)' }}>
-            {/* @ts-expect-error Wistia custom element */}
-            <wistia-player media-id="iti05qn4ly" aspect="0.4621309370988447"></wistia-player>
-          </div>
-        </Anim>
       </div>
     </section>
   );

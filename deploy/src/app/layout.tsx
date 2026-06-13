@@ -36,7 +36,6 @@ export default function RootLayout({
       <head>
         <script src="https://fast.wistia.com/player.js" async></script>
         <script src="https://fast.wistia.com/embed/iuieek8lrm.js" async type="module"></script>
-        <script src="https://fast.wistia.com/embed/iti05qn4ly.js" async type="module"></script>
       </head>
       <body>{children}</body>
     </html>
