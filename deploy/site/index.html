@@ -1715,5 +1715,82 @@
       });
     })();
   </script>
+
+  <!-- Atribuicao de trafego: persiste UTMs (7 dias) e repassa para os links da Kiwify -->
+  <script>
+  (function () {
+    var TRACK_KEYS = [
+      'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
+      'fbclid', 'gclid'
+    ];
+    var STORAGE_KEY = '_traffic_attribution';
+    var COOKIE_TTL  = 10080; // minutos = 7 dias
+
+    function readFromUrl() {
+      var params = new URLSearchParams(window.location.search);
+      var found = {};
+      TRACK_KEYS.forEach(function (key) {
+        var value = params.get(key);
+        if (value) found[key] = value;
+      });
+      return found;
+    }
+
+    function saveCookie(data) {
+      var expires = new Date(Date.now() + COOKIE_TTL * 60 * 1000).toUTCString();
+      document.cookie =
+        STORAGE_KEY + '=' + encodeURIComponent(JSON.stringify(data)) +
+        '; expires=' + expires +
+        '; path=/' +
+        '; SameSite=Lax' +
+        (location.protocol === 'https:' ? '; Secure' : '');
+    }
+
+    function readCookie() {
+      var match = document.cookie.match(
+        new RegExp('(?:^|;\\s*)' + STORAGE_KEY + '=([^;]*)')
+      );
+      if (!match) return {};
+      try { return JSON.parse(decodeURIComponent(match[1])); }
+      catch (error) { return {}; }
+    }
+
+    // Last-touch: a URL atual sobrescreve o que estava salvo
+    var utms = Object.assign({}, readCookie(), readFromUrl());
+
+    if (Object.keys(utms).length > 0) {
+      saveCookie(utms);
+      try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(utms)); } catch (error) {}
+    }
+
+    function appendUtmsToLinks() {
+      if (!Object.keys(utms).length) return;
+      document.querySelectorAll('a[href*="kiwify.com"]').forEach(function (link) {
+        try {
+          var url = new URL(link.href, window.location.origin);
+          Object.keys(utms).forEach(function (key) {
+            if (!url.searchParams.has(key)) url.searchParams.set(key, utms[key]);
+          });
+          link.href = url.toString();
+        } catch (error) {}
+      });
+    }
+
+    function init() {
+      appendUtmsToLinks();
+      if (window.MutationObserver && document.body) {
+        new MutationObserver(appendUtmsToLinks).observe(document.body, {
+          childList: true, subtree: true
+        });
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+  </script>
 </body>
 </html>
