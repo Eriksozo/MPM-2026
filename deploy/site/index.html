@@ -860,10 +860,13 @@
       z-index: -1;
     }
     .offer-box {
+      --ob-pad-top: clamp(var(--space-6), 5vw, var(--space-10));
+      --ob-pad-x: clamp(var(--space-5), 4vw, var(--space-8));
+      --ob-pad-bottom: clamp(var(--space-6), 5vw, var(--space-10));
       background-color: var(--color-bg-card);
       border: 1px solid rgba(217, 163, 91,0.25);
       border-radius: var(--radius-xl);
-      padding: clamp(var(--space-6), 5vw, var(--space-10)) clamp(var(--space-5), 4vw, var(--space-8));
+      padding: var(--ob-pad-top) var(--ob-pad-x) var(--ob-pad-bottom);
       text-align: center;
       position: relative;
       box-shadow: var(--shadow-lg), var(--shadow-glow-primary);
@@ -881,7 +884,7 @@
 
     /* ── Offer urgency strip (top of box) ── */
     .offer-urgency {
-      margin: calc(-1 * clamp(var(--space-6), 5vw, var(--space-10))) calc(-1 * clamp(var(--space-5), 4vw, var(--space-8))) clamp(var(--space-5), 3vw, var(--space-8));
+      margin: calc(-1 * var(--ob-pad-top)) calc(-1 * var(--ob-pad-x)) clamp(var(--space-5), 3vw, var(--space-8));
       padding: 14px var(--space-5);
       background: linear-gradient(90deg, rgba(229, 90, 62, 0.18) 0%, rgba(229, 90, 62, 0.32) 50%, rgba(229, 90, 62, 0.18) 100%);
       border-bottom: 1px solid rgba(229, 90, 62, 0.4);
@@ -1085,9 +1088,11 @@
       .value-stack li .vs-label small { font-size: 10px; margin-top: 2px; }
       .value-stack li .vs-value { font-size: 14px; }
       
-      /* Offer box - PADDING GENEROSO INFERIOR */
-      .offer-box { 
-        padding: var(--space-6) var(--space-4) var(--space-9); 
+      /* Offer box - PADDING GENEROSO INFERIOR (faixa de urgencia acompanha via variaveis) */
+      .offer-box {
+        --ob-pad-top: var(--space-6);
+        --ob-pad-x: var(--space-4);
+        --ob-pad-bottom: var(--space-9);
         margin-bottom: 0;
       }
       
@@ -1123,10 +1128,10 @@
       
       /* Sticky bar */
       .sticky-bar { padding: var(--space-2) var(--space-3); gap: var(--space-3); }
-      .sticky-bar-text { flex: 1 1 auto; gap: 1px; }
-      .sticky-bar-text strong { font-size: var(--text-base); white-space: nowrap; }
-      .sticky-bar-text span { font-size: 9px; letter-spacing: 0.04em; white-space: nowrap; }
-      .sticky-bar .btn { font-size: 14px; padding: 12px 18px; min-height: 46px; flex-shrink: 0; }
+      .sticky-bar-text { flex: 1 1 auto; min-width: 0; gap: 1px; overflow: hidden; }
+      .sticky-bar-text span { display: none; }
+      .sticky-bar-text strong { font-size: var(--text-base); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .sticky-bar .btn { font-size: 14px; padding: 12px var(--space-4); min-height: 46px; }
     }
 
     /* ══════════════════════════
@@ -1226,14 +1231,14 @@
     }
     .sticky-bar-text strong { font-family: var(--font-display); font-weight: 400; font-size: var(--text-md); letter-spacing: 0.04em; color: var(--color-text-high); }
     .sticky-bar-text span { color: var(--color-primary); font-size: var(--text-xs); letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; }
-    .sticky-bar .btn { flex-shrink: 0; }
+    .sticky-bar .btn { flex-shrink: 0; font-size: var(--text-sm); padding: var(--space-3) var(--space-5); min-height: 48px; }
     @media (max-width: 380px) {
       .sticky-bar-text { display: none; }
       .sticky-bar { justify-content: center; padding: var(--space-3); }
       .container { padding-inline: var(--space-3); }
       .container--wide { padding-inline: var(--space-3); }
       .hero { padding-block: clamp(var(--space-7), 10vw, var(--space-11)); }
-      .offer-box { padding: var(--space-5) var(--space-3) var(--space-8); }
+      .offer-box { --ob-pad-top: var(--space-5); --ob-pad-x: var(--space-3); --ob-pad-bottom: var(--space-8); }
       .value-stack { padding: 0 var(--space-2); }
       .bonus-card, .curriculum-card { padding: var(--space-4) var(--space-3); }
       .hero-title { font-size: clamp(1.7rem, 7vw, 2.6rem); }
@@ -1525,7 +1530,7 @@
           <p class="price-reveal-foot">Pagamento único · Pix ou Cartão à vista</p>
         </div>
 
-        <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta btn--cta--pulse" style="font-size: var(--text-xl); padding: var(--space-5) var(--space-8); width: 100%; max-width: 460px;">QUERO ENTRAR POR R$ 47,90 ▶</a>
+        <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta btn--cta--pulse" style="width: 100%; max-width: 460px;">QUERO ENTRAR POR R$ 47,90 ▶</a>
 
         <!-- Trust row -->
         <div class="trust-row">
@@ -1632,7 +1637,7 @@
       <span>Oferta por tempo limitado</span>
       <strong>De R$197 por R$47,90</strong>
     </div>
-    <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta btn--cta--pulse" style="font-size: var(--text-sm); padding: var(--space-3) var(--space-5); min-height: 48px;">
+    <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta btn--cta--pulse">
       Quero garantir ▶
     </a>
   </div>
