@@ -230,6 +230,8 @@
       white-space: nowrap;
     }
     .btn:active { transform: scale(0.97); }
+    /* Icone de play em SVG (renderiza igual em todo device, nunca vira emoji) */
+    .play-ico { width: 0.82em; height: 0.82em; flex-shrink: 0; display: inline-block; }
 
     .btn--cta {
       background-color: var(--color-cta);
@@ -1334,7 +1336,7 @@
 
       <div class="hero-cta-wrap">
         <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta btn--cta--pulse">
-          ▶︎ Quero me inscrever agora
+          <svg class="play-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Quero me inscrever agora
         </a>
         <span class="hero-guarantee">🔒 Acesso imediato &nbsp;·&nbsp; Pagamento seguro</span>
       </div>
@@ -1532,7 +1534,7 @@
           <p class="price-reveal-foot">Pagamento único · Pix ou Cartão à vista</p>
         </div>
 
-        <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta btn--cta--pulse" style="width: 100%; max-width: 460px;">QUERO ENTRAR POR R$ 47,90 ▶︎</a>
+        <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta btn--cta--pulse" style="width: 100%; max-width: 460px;">QUERO ENTRAR POR R$ 47,90<svg class="play-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></a>
 
         <!-- Trust row -->
         <div class="trust-row">
@@ -1611,7 +1613,7 @@
       <p class="body-lg" style="max-width: 520px; margin: 0 auto var(--space-8);">
         Espero que você aproveite essa chance. Tenho certeza absoluta que você vai se surpreender com o que eu entrego.
       </p>
-      <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta">▶︎ Quero meu acesso R$47,90</a>
+      <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta"><svg class="play-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Quero meu acesso R$47,90</a>
     </div>
   </section>
 
@@ -1640,7 +1642,7 @@
       <strong>De R$197 por R$47,90</strong>
     </div>
     <a href="https://pay.kiwify.com.br/sLajilA" class="btn btn--cta btn--cta--pulse">
-      Quero garantir ▶︎
+      Quero garantir<svg class="play-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
     </a>
   </div>
 
