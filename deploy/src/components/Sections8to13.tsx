@@ -215,7 +215,7 @@ export function OfferSection() {
     <section className="sect" style={{ background: 'var(--bg-surface)', position: 'relative', overflow: 'hidden' }} id="oferta" ref={ref}>
       <GlowOrbs count={3} />
       <div className="sect-inner" style={{ position: 'relative', zIndex: 1 }}>
-        <Anim><h2 className="sect-title" style={{ textAlign: 'center' }}>Domine a pentatônica no contrabaixo por apenas <GradientText style={{ fontFamily: 'var(--font-d)' }}>R$37,90</GradientText></h2></Anim>
+        <Anim><h2 className="sect-title" style={{ textAlign: 'center' }}>Domine a pentatônica no contrabaixo por apenas <GradientText style={{ fontFamily: 'var(--font-d)' }}>R$47,90</GradientText></h2></Anim>
         <Anim delay={0.1}><div className="sect-text" style={{ margin: '0 auto', textAlign: 'center', maxWidth: 640 }}>
           <p>Você pode continuar tentando juntar vídeos soltos, decorar shapes aleatórios e torcer para uma hora &quot;clicar&quot;.</p>
           <p>Ou pode seguir um caminho organizado, direto e musical.</p>
@@ -233,7 +233,7 @@ export function OfferSection() {
             <p style={{ color: 'var(--text-mid)', fontSize: '0.9rem', marginTop: 8, marginBottom: 20, textAlign: 'center' }}>Acesso ao treinamento completo A Nova Linguagem da Pentatônica.</p>
             <UrgencyBanner />
             <div style={{ marginTop: 24 }}>
-              <PulseRing><a href={LINK} className="btn-cta btn-cta-pulse" style={{ width: '100%', justifyContent: 'center' }}>▶ Quero acessar o treinamento por R$37,90</a></PulseRing>
+              <PulseRing><a href={LINK} className="btn-cta btn-cta-pulse" style={{ width: '100%', justifyContent: 'center' }}>▶ Quero acessar o treinamento por R$47,90</a></PulseRing>
             </div>
             <TrustSignals />
           </div>
@@ -269,7 +269,7 @@ export function OfferSection() {
 
         <Anim delay={0.35}>
           <div style={{ textAlign: 'center', marginTop: 48 }}>
-            <PulseRing><a href={LINK} className="btn-cta btn-cta-pulse" style={{ fontSize: '1.1rem', padding: '18px 48px' }}>▶ Quero acessar o treinamento por R$37,90</a></PulseRing>
+            <PulseRing><a href={LINK} className="btn-cta btn-cta-pulse" style={{ fontSize: '1.1rem', padding: '18px 48px' }}>▶ Quero acessar o treinamento por R$47,90</a></PulseRing>
             <p style={{ marginTop: 14, fontSize: '0.75rem', color: 'var(--text-low)', maxWidth: 480, margin: '14px auto 0', letterSpacing: '0.04em' }}>Garanta seu acesso e comece hoje.</p>
             <div style={{ marginTop: 12 }}><GuaranteeBadge compact={true} /></div>
             <TrustSignals />

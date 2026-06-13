@@ -36,7 +36,7 @@ export function StickyCTA() {
         width: '100%', maxWidth: 400, justifyContent: 'center',
         fontSize: '1rem', padding: '14px 24px', minHeight: 50,
       }}>
-        ▶ Garantir por R$37,90
+        ▶ Garantir por R$47,90
       </a>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 2 }}>
         <span style={{ fontSize: 10, color: 'var(--text-low)', display: 'flex', alignItems: 'center', gap: 4 }}>
@@ -368,7 +368,7 @@ export function ExitIntentPopup() {
           color: 'var(--text-high)', lineHeight: 1.1, marginBottom: 12,
         }}>Espera! Não vai sem isso.</div>
         <p style={{ fontSize: '0.9rem', color: 'var(--text-mid)', lineHeight: 1.7, marginBottom: 8 }}>
-          Por apenas <strong style={{ color: 'var(--cta)' }}>R$37,90</strong>, você pode transformar sua forma de tocar pentatônica no contrabaixo.
+          Por apenas <strong style={{ color: 'var(--cta)' }}>R$47,90</strong>, você pode transformar sua forma de tocar pentatônica no contrabaixo.
         </p>
         <p style={{ fontSize: '0.8rem', color: 'var(--text-low)', marginBottom: 24 }}>
           Garantia de 7 dias · Acesso imediato · Pagamento seguro

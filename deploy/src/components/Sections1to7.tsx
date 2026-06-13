@@ -31,7 +31,7 @@ export function HeroSection() {
             <SoundSpectrum bars={40} height={48} />
           </Anim>
           <Anim delay={0.45}>
-            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 16 }}>
+            <div className="hero-badges" style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginTop: 16 }}>
               <FloatingBadge text="5 Módulos" icon="🎸" delay={0} />
               <FloatingBadge text="Do Zero ao Avançado" icon="🔥" delay={0.4} />
             </div>
