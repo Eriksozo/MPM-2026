@@ -2,9 +2,7 @@
 node_modules/
 deploy/node_modules/
 
-# next.js build output
-.next/
-deploy/.next/
+# build output (gerado pelo build, nao versionar)
 out/
 deploy/out/
 
